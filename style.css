@@ -1,0 +1,364 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 10px;
+    flex-grow: 1;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #052c52;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.logo img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px;
+}
+
+.menu-button {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    padding: 5px 0;
+}
+
+.menu-button:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none; /* Remove bolinhas ou marcadores */
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.2s, padding 0.2s;
+    border-radius: 5px; /* Menor borda */
+}
+
+.dropdown-menu a:hover {
+    background-color: #052c52;
+    color: white;
+    padding: 6px 10px; /* Menos padding no hover */
+    border-radius: 5px; /* Menor borda também no hover */
+}
+
+.consultar-button {
+    position: relative; /* Necessário para que o dropdown se posicione em relação ao botão */
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Posiciona o menu logo abaixo do botão */
+    left: 0; /* Alinha o menu à esquerda do botão */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    padding: 5px 0;
+}
+
+.menu-button:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.2s, padding 0.2s;
+    border-radius: 5px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #052c52;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* Search */
+.search input {
+    padding: 8px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.form-section {
+    margin-top: 240px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: #052c52;
+    border-radius: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: left;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.form-group {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: white;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #052c52;
+    color: white;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    align-self: flex-start;
+}
+
+button:hover {
+    background-color: #12579c;
+}
+
+/* Upload Section */
+.upload-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.upload-label {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #052c52;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.upload-label:hover {
+    background-color: #12579c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.upload-label:active {
+    transform: scale(1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+    display: none; /* Oculta o input padrão */
+}
+
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #052c52;
+    color: #fff;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2000;
+    padding: 10px 20px;
+    width: max-content;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+
+    .container {
+        margin: 5px;
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .search input {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .form-section {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 15px;
+    }
+}
+
+/* Estilo minimalista para o botão de Home */
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Fundo transparente */
+    padding: 8px; /* Reduz o padding */
+    border-radius: 50%; /* Manter o ícone redondo */
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Apenas transição de aumento */
+}
+
+.home-button:hover {
+    transform: scale(1.1); /* Efeito de aumento simples */
+}
+
+.home-button img {
+    width: 24px; /* Reduz o tamanho do ícone */
+    height: 24px;
+}
+
+.home-button:focus {
+    outline: none; /* Remove o contorno ao focar */
+}
+
+.home-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    margin-left: 40px; /* Ajuste da margem esquerda para afastar do botão de pesquisa */
+}
+
+.home-button:hover {
+    transform: scale(1.1); /* Efeito de aumento simples */
+}
+
+.home-button img {
+    width: 24px; /* Reduz o tamanho do ícone */
+    height: 24px;
+}
+
+.home-button:focus {
+    outline: none; /* Remove o contorno ao focar */
+}
